@@ -1,0 +1,204 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out; /* Add a smooth transition effect globally */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
+  background-color: #f0f4f8; /* Soft light background */
+  color: #444; /* Darker text color for readability */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #f0f4f8, #a8c0ff); /* Gradient background */
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideIn 1s ease-out; /* Animation for header */
+}
+
+/* Movie list layout */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease-out; /* Fade-in from bottom */
+}
+
+/* Movie card styles */
+.movie-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Hover effect with shadow */
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05); /* Scale image slightly on hover */
+}
+
+.movie-card h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.movie-card p {
+  font-size: 1.1em;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation for form */
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 350px;
+  margin-right: 15px;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Slight press-down effect */
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation for form, header, and movie list */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* added */
+.sorting {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sorting button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sorting button:hover {
+  background-color: #0056b3;
+}
